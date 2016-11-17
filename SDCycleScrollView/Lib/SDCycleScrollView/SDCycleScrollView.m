@@ -73,6 +73,7 @@ NSString * const ID = @"cycleCell";
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self initialization];
     [self setupMainView];
 }
@@ -553,6 +554,7 @@ NSString * const ID = @"cycleCell";
     long itemIndex = indexPath.item % self.imagePathsGroup.count;
     
     NSString *imagePath = self.imagePathsGroup[itemIndex];
+    cell.cornerMarkImageView.image = nil;
     
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {
@@ -564,6 +566,17 @@ NSString * const ID = @"cycleCell";
             }
             cell.imageView.image = image;
         }
+        
+        if ([self.cornerMarkImage hasPrefix:@"http"]) {
+            [cell.cornerMarkImageView sd_setImageWithURL:[NSURL URLWithString:self.cornerMarkImage] placeholderImage:nil];
+        } else {
+            UIImage *cornerImage = [UIImage imageNamed:self.cornerMarkImage];
+            if (!cornerImage) {
+                [UIImage imageWithContentsOfFile:self.cornerMarkImage];
+            }
+            cell.cornerMarkImageView.image = cornerImage;
+        }
+        
     } else if (!self.onlyDisplayText && [imagePath isKindOfClass:[UIImage class]]) {
         cell.imageView.image = (UIImage *)imagePath;
     }

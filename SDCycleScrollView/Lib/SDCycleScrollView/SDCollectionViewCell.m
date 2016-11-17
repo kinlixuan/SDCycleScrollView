@@ -72,6 +72,10 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     _imageView = imageView;
     [self.contentView addSubview:imageView];
+    
+    UIImageView *cornerMark = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 39, 32)];
+    _cornerMarkImageView = cornerMark;
+    [self.contentView addSubview:cornerMark];
 }
 
 - (void)setupTitleLabel
