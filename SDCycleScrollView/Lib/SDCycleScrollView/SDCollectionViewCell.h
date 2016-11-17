@@ -47,4 +47,6 @@
 /** 只展示文字轮播 */
 @property (nonatomic, assign) BOOL onlyDisplayText;
 
+@property (weak, nonatomic) UIImageView *cornerMarkImageView;
+
 @end
