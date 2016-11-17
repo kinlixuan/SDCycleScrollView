@@ -173,17 +173,6 @@ typedef enum {
 @property (nonatomic, assign) CGFloat titleLabelHeight;
 
 
-// ******************* my extension *********************
-
-/** 左上角临时角标 **/
-@property (nonatomic, strong) NSString *cornerMarkImage;
-
-
-
-
-
-
-
 
 //////////////////////  清除缓存接口  //////////////////////
 

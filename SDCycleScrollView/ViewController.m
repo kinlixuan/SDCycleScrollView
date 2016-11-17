@@ -122,7 +122,7 @@
     cycleScrollView3.currentPageDotImage = [UIImage imageNamed:@"pageControlCurrentDot"];
     cycleScrollView3.pageDotImage = [UIImage imageNamed:@"pageControlDot"];
     cycleScrollView3.imageURLStringsGroup = imagesURLStrings;
-    cycleScrollView.cornerMarkImage = @"http://hbsnj.keliren.cn/tuku/a/20161104/581c05ccca265.jpg";
+    
     [demoContainerView addSubview:cycleScrollView3];
     
 // >>>>>>>>>>>>>>>>>>>>>>>>> demo轮播图4 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
