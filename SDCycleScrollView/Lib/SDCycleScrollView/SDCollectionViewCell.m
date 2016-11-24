@@ -76,6 +76,11 @@
     UIImageView *cornerMark = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 39, 32)];
     _cornerMarkImageView = cornerMark;
     [self.contentView addSubview:cornerMark];
+    
+    
+    UIImageView *cover = [[UIImageView alloc] init];
+    _coverImageView = cover;
+    [self.contentView addSubview:cover];
 }
 
 - (void)setupTitleLabel
@@ -109,6 +114,7 @@
         CGFloat titleLabelX = 0;
         CGFloat titleLabelY = self.sd_height - titleLabelH;
         _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
+        _coverImageView.frame = self.bounds;
     }
 }
 

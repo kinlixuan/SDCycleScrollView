@@ -48,5 +48,6 @@
 @property (nonatomic, assign) BOOL onlyDisplayText;
 
 @property (weak, nonatomic) UIImageView *cornerMarkImageView;
+@property (weak, nonatomic) UIImageView *coverImageView;
 
 @end
