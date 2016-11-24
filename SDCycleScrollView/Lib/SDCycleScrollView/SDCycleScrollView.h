@@ -177,7 +177,7 @@ typedef enum {
 
 /** 左上角临时角标 **/
 @property (nonatomic, strong) NSString *cornerMarkImage;
-
+@property (nonatomic, strong) UIImage *coverImage;
 
 
 

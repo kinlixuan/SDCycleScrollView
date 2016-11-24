@@ -596,6 +596,7 @@ NSString * const ID = @"cycleCell";
         cell.onlyDisplayText = self.onlyDisplayText;
     }
     
+    cell.coverImageView.image = self.coverImage;
     return cell;
 }
 
