@@ -114,7 +114,7 @@
         CGFloat titleLabelX = 0;
         CGFloat titleLabelY = self.sd_height - titleLabelH;
         _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
-        _coverImageView.frame = self.bounds;
+        _coverImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height + 5);
     }
 }
 
