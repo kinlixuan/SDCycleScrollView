@@ -565,7 +565,7 @@ NSString * const ID = @"cycleCell";
     cell.playDurationLabel.text = self.durationStr;
     [cell.playImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playImageViewTaped:)]];
     
-    if (indexPath.row == 0 && self.showPlayImage) {
+    if (itemIndex == 0 && self.showPlayImage) {
         cell.playImageView.hidden = NO;
         cell.playDurationLabel.hidden = NO;
     } else {
