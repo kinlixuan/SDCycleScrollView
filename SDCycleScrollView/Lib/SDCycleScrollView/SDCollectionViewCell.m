@@ -77,6 +77,18 @@
     _cornerMarkImageView = cornerMark;
     [self.contentView addSubview:cornerMark];
     
+    CGFloat width = 38;
+    UIImageView *play = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width / 2 - width / 2, self.bounds.size.height - width * 2, width, width)];
+    play.userInteractionEnabled = YES;
+    _playImageView = play;
+    [self.contentView addSubview:play];
+    
+    
+    UILabel *duration = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(play.frame) + 1, CGRectGetMinY(play.frame), 20, 15)];
+    duration.font = [UIFont systemFontOfSize:12];
+    duration.textColor = [UIColor blackColor];
+    _playDurationLabel = duration;
+    [self.contentView addSubview:duration];
     
     UIImageView *cover = [[UIImageView alloc] init];
     _coverImageView = cover;

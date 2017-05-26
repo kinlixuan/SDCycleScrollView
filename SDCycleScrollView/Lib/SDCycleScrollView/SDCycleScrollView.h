@@ -178,7 +178,10 @@ typedef enum {
 /** 左上角临时角标 **/
 @property (nonatomic, strong) NSString *cornerMarkImage;
 @property (nonatomic, strong) UIImage *coverImage;
-
+@property (nonatomic, strong) NSString *playImage;
+@property (nonatomic, assign) BOOL showPlayImage;
+@property (nonatomic, strong) NSString *durationStr;
+@property (nonatomic, copy) void(^playAction)();
 
 
 

@@ -540,6 +540,12 @@ NSString * const ID = @"cycleCell";
     }
 }
 
+- (void)playImageViewTaped:(UIGestureRecognizer *)ges {
+    if (self.playAction) {
+        self.playAction();
+    }
+}
+
 
 #pragma mark - UICollectionViewDataSource
 
@@ -555,6 +561,17 @@ NSString * const ID = @"cycleCell";
     
     NSString *imagePath = self.imagePathsGroup[itemIndex];
     cell.cornerMarkImageView.image = nil;
+    cell.playImageView.image = [UIImage imageNamed:self.playImage];
+    cell.playDurationLabel.text = self.durationStr;
+    [cell.playImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playImageViewTaped:)]];
+    
+    if (indexPath.row == 0 && self.showPlayImage) {
+        cell.playImageView.hidden = NO;
+        cell.playDurationLabel.hidden = NO;
+    } else {
+        cell.playImageView.hidden = YES;
+        cell.playDurationLabel.hidden = YES;
+    }
     
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {

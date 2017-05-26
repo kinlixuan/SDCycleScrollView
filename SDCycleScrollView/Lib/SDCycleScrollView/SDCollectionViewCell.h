@@ -49,5 +49,7 @@
 
 @property (weak, nonatomic) UIImageView *cornerMarkImageView;
 @property (weak, nonatomic) UIImageView *coverImageView;
+@property (weak, nonatomic) UIImageView *playImageView;
+@property (weak, nonatomic) UILabel *playDurationLabel;
 
 @end
